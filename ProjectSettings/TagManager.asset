@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Portal Level Main
+  - Portal Level 2
+  - Portal Level 3
+  - Portal Level 4
   layers:
   - Default
   - TransparentFX
