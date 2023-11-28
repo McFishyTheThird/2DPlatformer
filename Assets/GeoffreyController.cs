@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GeoffreyController : MonoBehaviour
 {
     [SerializeField]
+    int goToScene;
+    [SerializeField]
     float jumpForce = 300;
     [SerializeField]
     Transform feet;
@@ -52,21 +54,9 @@ public class GeoffreyController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "Portal Level Main")
+        if(other.gameObject.tag == "Portal")
         {
-            SceneManager.LoadScene(1);
-        }
-        else if(other.gameObject.tag == "Portal Level 2")
-        {
-            SceneManager.LoadScene(2);
-        }
-        else if(other.gameObject.tag == "Portal Level 3")
-        {
-            SceneManager.LoadScene(3);
-        }
-        else if(other.gameObject.tag == "Portal Level 4")
-        {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(goToScene);
         }
     }
     // private Vector2 GetFootPosition()
